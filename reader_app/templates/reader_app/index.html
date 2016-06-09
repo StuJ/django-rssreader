@@ -1,0 +1,9 @@
+<h1>RSS Reader</h1>
+
+<ul>
+    {% for post in feed.entries %}
+
+    <li><a href = {{post.link}}> {{post.title}} </a></li>
+
+    {% endfor %}
+</ul>
