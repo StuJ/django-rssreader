@@ -68,7 +68,14 @@
 
     <div class="container">
         <ul>
-
+            {% for post in favourites %}
+                <li><a href = {{post.url}} style= "font-weight: bold"> {{post.title}} </a></li>
+                    <ul>
+                        <li>{{post.description | safe}}</li>
+                        <button type= "button">Remove from Favourites</button>
+                    </ul>
+                <hr>
+            {% endfor %}
         </ul>
       <footer>
         <p>&copy; 2016 Stuart Jennings, Inc.</p>
