@@ -69,7 +69,11 @@
     <div class="container">
         <ul>
             {% for post in feed.entries %}
-                <li><a href = {{post.link}}> {{post.title}} </a></li>
+                <li><a href = {{post.link}} style= "font-weight: bold"> {{post.title}} </a></li>
+                    <ul>
+                        <li>{{post.description | safe}}</li>
+                    </ul>
+                <hr>
             {% endfor %}
         </ul>
       <footer>
