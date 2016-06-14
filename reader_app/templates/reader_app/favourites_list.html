@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>RSS Reader</title>
+    <title>RSS Reader: Favourites</title>
 
     <!-- Bootstrap core CSS -->
     <!-- Latest compiled and minified CSS -->
@@ -61,18 +61,18 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
-        <h1>RSS Reader</h1>
-          <h4>View and favourite articles from the r/django subreddit</h4>
+        <h2>Favourites</h2>
+          <h4>View and manage your favourite posts</h4>
       </div>
     </div>
 
     <div class="container">
         <ul>
-            {% for post in feed.entries %}
-                <li><a href = {{post.link}} style= "font-weight: bold"> {{post.title}} </a></li>
+            {% for post in favourites %}
+                <li><a href = {{post.url}} style= "font-weight: bold"> {{post.title}} </a></li>
                     <ul>
                         <li>{{post.description | safe}}</li>
-                        <button type= "button">Add to Favourites</button>
+                        <button type= "button">Remove from Favourites</button>
                     </ul>
                 <hr>
             {% endfor %}
