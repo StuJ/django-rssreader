@@ -1,6 +1,8 @@
 # django-rssreader
 Work in progress. A Django web app that enables users to read, search and favourite articles from an RSS feed.
 
+Dependencies: Django 1.9.7, Feedparser 5.2.1
+
 Quick start
 -----------
 
