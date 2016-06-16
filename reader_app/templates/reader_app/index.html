@@ -68,11 +68,11 @@
 
     <div class="container">
         <ul>
-            {% for post in feed.entries %}
-                <li><a href = {{post.link}} style= "font-weight: bold"> {{post.title}} </a></li>
+            {% for article in articles %}
+                <li><a href="{{article.url}}" style="font-weight: bold"> {{article.title}} </a></li>
                     <ul>
-                        <li>{{post.description | safe}}</li>
-                        <button type= "button">Add to Favourites</button>
+                        <li>{{article.description | safe}}</li>
+                        <a class="btn btn-success" href="{% url 'add_favourite' article.pk %}">Add to Favourites</a>
                     </ul>
                 <hr>
             {% endfor %}

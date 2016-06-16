@@ -14,9 +14,12 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
+
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = '_yg22p#t(dr*ew&37)#9iza1=7o)#$a3z23!a32!v=)!&8loti'
 
 # Application definition
 
@@ -27,7 +30,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'reader_app'
+
+    'reader_app',
 ]
 
 MIDDLEWARE_CLASSES = [
